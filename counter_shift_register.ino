@@ -11,7 +11,7 @@ void setup() {
 
 void loop() {
   for (byte i=0x00;i<=0xFF;i++){
-    digitalWrite(latchPin,LOW);
+  digitalWrite(latchPin,LOW);
   shiftOut(dataPin,clockPin,LSBFIRST,i);
   digitalWrite(latchPin,HIGH);
   if (i == 0xFF){
