@@ -1,6 +1,6 @@
 int trigPin = 12;
 int echoPin = 11;
-int pingTravelTime;
+int pingTravelTime,pingDistance;
 void setup() {
   pinMode(trigPin,OUTPUT);
   pinMode(echoPin,INPUT);
@@ -15,7 +15,8 @@ void loop() {
   delayMicroseconds(10);
   digitalWrite(trigPin,LOW);
   pingTravelTime=pulseIn(echoPin,HIGH);
-  Serial.println(pingTravelTime);
+  pingDistance=0.005214*pingTravelTime;
+  Serial.println(pingDistance);
   delay(25);
 
 }
