@@ -16,7 +16,12 @@ void loop() {
   digitalWrite(trigPin,LOW);
   pingTravelTime=pulseIn(echoPin,HIGH);
   pingDistance=0.005214*pingTravelTime;
-  Serial.println(pingDistance);
+  Serial.print(0);
+  Serial.print(",");
+  Serial.print(pingDistance);
+  Serial.print(",");
+  Serial.println(10);
+  //the statements are used to delimit the regions for plotting
   delay(25);
 
 }
